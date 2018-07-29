@@ -17,8 +17,8 @@ The simplest way to run this project to see that it works is to open it in VS201
 To run it from VSCode, open the Terminal and execute the following commands:
 
 1. dotnet restore
-2. npm install
-3. dotnet build
+2. npm install (located in the ClientApp folder)
+3. dotnet build (make sure you return to the root of the project directory after the previous step)
 4. dotnet run
 
 Look for the line that looks like to following to know which URL to open in a browser to see the working site:
@@ -31,8 +31,9 @@ The template project uses Angular 4.3.x and Angular CLI 1.7.x. I had to take the
 
 1. Installed Angular CLI globally: npm install -g @angular/cli
 2. Opened a command prompt at the root of the ng-cli app; in this case, ClientApp
-3. ng update [This shows what packages need to be upgraded]
-4. In my case, I had to run the following
+3. Run the following command to upgrade ng-cli to the latest 6x version: `npm install --save-dev @angular/cli@^6.0.0;
+4. ng update [This shows what packages need to be upgraded]
+5. In my case, I had to run the following
    * ng update @angular/cli
    * ng update @angular/core
 
@@ -40,7 +41,7 @@ The template project uses Angular 4.3.x and Angular CLI 1.7.x. I had to take the
 
 In VSCode, click on the CSPROJ file. In Visual Studio 2017, right-click the project root to edit the CSPROJ file.
 
-I reviewed the following not looking for ng-cli related commands that could be preventing the build from succeeding (dotnot build):
+I reviewed the following looking for ng-cli related commands that could be preventing the build from succeeding (dotnot build):
 
 `<Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish">`
 
